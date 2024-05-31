@@ -95,6 +95,8 @@ curl localhost:8080/actuator/health
 git clone https://github.com/Karan-patel/mycoolservice.git
    ```
 
+###### Note : This service use inmemory db to store user credentials, you can configure user, role and password into SecurityConfig.java. Default, I have added 2 users swisscom, user with role admin, user resp. This will be required to fetch authorization token as explained below.
+
 ## Usage
 
 ### API Endpoints
@@ -109,6 +111,9 @@ curl --location 'http://localhost:8080/mycoolservice/authenticate' \
     "username" : "user",
     "password" : "password"
 }'
+
+Output :
+eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJhZG1pbiJdLCJzdWIiOiJzd2lzc2NvbSIsImlhdCI6MTcxNzE2OTM0MywiZXhwIjoxNzE3MjA1MzQzfQ.NU3TkVFkigKwtzf07KRvnPtC2vvaqkvq5DK9VOOxMSw
   ```
 - **POST /mycoolservice/api/users**: Creates a new user.
 ```bash
