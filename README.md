@@ -90,7 +90,7 @@ curl localhost:8080/actuator/health
 7. **For OPA based policy authorization deploy opa container**
  To load OPA with above policy in Minikube follow [**guideline**](https://github.com/Karan-patel/opa?tab=readme-ov-file#opa-deployment-guide) here.
  Git repository for detailed guide to load policy in Open Policy Agent (OPA) and deploy in Minikube.
-
+#### **It is better to deploy OPA first!**
  ```bash
 git clone https://github.com/Karan-patel/mycoolservice.git
    ```
