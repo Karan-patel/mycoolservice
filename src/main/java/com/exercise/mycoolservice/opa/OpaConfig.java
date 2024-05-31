@@ -20,7 +20,7 @@ public class OpaConfig {
 
     @Bean
     public WebClient opaWebClient() {
-        log.info("Initializing webclient to consume api exposed by OPA : {}", url);
+        log.info("Initializing webclient to consume api exposed by OPA.");
         return WebClient.builder()
                 .baseUrl(url)
                 .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)

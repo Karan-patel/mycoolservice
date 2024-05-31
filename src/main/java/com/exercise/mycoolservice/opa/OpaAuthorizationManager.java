@@ -32,7 +32,6 @@ public class OpaAuthorizationManager implements ReactiveAuthorizationManager<Aut
         final Mono<OpaRequest> opaPayload = getPayload(authentication, authorizationContext);
 
         return opaPayload.flatMap(opaRequest -> {
-            log.info("Inside opaRequest block !");
             if (opaRequest != null) {
                 //ROLE, AUTHENTICATION STATUS IS REQUIRED FOR POLICY TO EVALUATE AUTHORIZATION, IF IT IS NOT PRESENT SIMPLY UN-AUTHORIZE.
                 log.info("Invoking OPA api to retrieve authorization decision for given user based on opa-policy");
@@ -53,7 +52,6 @@ public class OpaAuthorizationManager implements ReactiveAuthorizationManager<Aut
     private static Mono<OpaRequest> getPayload(Mono<Authentication> authentication, AuthorizationContext context) {
 
         return authentication.map(auth -> {
-            log.info("Inside getPayload -> auth");
             if (Optional.ofNullable(auth.getAuthorities()).isPresent() && !auth.getAuthorities().isEmpty()) {
                 //ONLY IF AUTHORITIES (ROLE) IS PRESENT.
                 final String role = auth.getAuthorities().stream().map(GrantedAuthority::getAuthority).findFirst().get();
