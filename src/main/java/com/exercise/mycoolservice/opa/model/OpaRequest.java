@@ -1,7 +1,6 @@
-package com.exercise.mycoolservice.opa;
+package com.exercise.mycoolservice.opa.model;
 
 
-import com.exercise.mycoolservice.opa.model.Input;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

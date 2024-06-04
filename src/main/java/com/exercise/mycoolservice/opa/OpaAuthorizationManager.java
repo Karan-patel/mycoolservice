@@ -1,6 +1,7 @@
 package com.exercise.mycoolservice.opa;
 
 import com.exercise.mycoolservice.opa.model.Input;
+import com.exercise.mycoolservice.opa.model.OpaRequest;
 import com.exercise.mycoolservice.opa.model.User;
 import com.jayway.jsonpath.JsonPath;
 import lombok.extern.slf4j.Slf4j;
