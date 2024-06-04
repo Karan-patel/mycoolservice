@@ -115,6 +115,8 @@ curl --location 'http://localhost:8080/mycoolservice/authenticate' \
 Output :
 eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJhZG1pbiJdLCJzdWIiOiJzd2lzc2NvbSIsImlhdCI6MTcxNzE2OTM0MywiZXhwIjoxNzE3MjA1MzQzfQ.NU3TkVFkigKwtzf07KRvnPtC2vvaqkvq5DK9VOOxMSw
   ```
+**Note : This token generation API is provided for demonstration/testing purposes only. In a real-world scenario, login credentials should be encrypted and securely transmitted over HTTPS to ensure the security of user data.**
+
 - **POST /mycoolservice/api/users**: Creates a new user.
 ```bash
 curl --location 'http://localhost:8080/mycoolservice/api/users' \
